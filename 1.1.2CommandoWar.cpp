@@ -43,10 +43,7 @@ int main()
         for (int i = 0; i < n; ++i)
         {
             costb += v[i].b;
-            if (total < costb + v[i].j)
-            {
-                total = costb + v[i].j;
-            }
+            total = std::max(total, costb + v[i].j);
         }
         printf("Case %d: %d\n", kase++, total);
     }
